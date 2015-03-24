@@ -1,7 +1,12 @@
+typedef struct Block Block;
+struct Block {
+	int size;
+};
+
 typedef struct Partition Partition;
 struct Partition {
-	int	size,
-		free;
+	int	size;
+	struct Block *block;
  	struct Partition *next;
 };
 
@@ -12,6 +17,8 @@ struct Memory {
 
 void insert_partition(Memory * list, Partition * partition)
 {
+	partition->next		= NULL;
+	partition->block 	= NULL;
 
     if (list == NULL || partition == NULL)
     {
@@ -72,7 +79,7 @@ void move_partition(Memory * source, Memory * destination, Partition * partition
 {
 	Partition * p_move 	= malloc(sizeof(Partition));
 	p_move->size		= partition->size;
-	p_move->free 		= partition->free
+	p_move->block 		= partition->block;
 	p_move->next 		= NULL;	
 
 	if (destination->head == NULL)
@@ -94,10 +101,16 @@ void print_partition(Partition * partition)
 {
 	printf("Size: %d octets \n", 
 		partition->size
+		
 	);
+
+	// printf("Size: %d octets | Block size: %d octets \n", 
+	// 	partition->size
+	// 	,partition->block->size
+	// );
 }
 
-void print_list(List * list) {
+void print_list(Memory * list) {
     
 	if (list == NULL)
     {
@@ -131,11 +144,11 @@ int list_size(Memory * list)
 	return count;
 }
 
-Memory * init_list(int * n)
+Memory * init_list()
 {
 	Memory * l = malloc(sizeof(Memory));
 
-	if (l == NULL || p ==  NULL)
+	if (l == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
