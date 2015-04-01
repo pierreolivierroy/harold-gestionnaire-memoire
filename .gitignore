@@ -58,7 +58,8 @@ sftp-config.json
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -120,3 +121,5 @@ Temporary Items
 *.out
 *.app
 
+obj/
+memory_manager
