@@ -15,7 +15,10 @@ int main()
    MemoryManager* manager = new MemoryManager();
 
    intptr_t b1 = manager->executeStrategy(strategy, 8);
+   intptr_t b2 = manager->executeStrategy(strategy, 512);
    cout << "b1 " << b1;
+   cout << "b2 " << b2;
+
    // ------------------------------------------------------
    // http://www.cplusplus.com/reference/list/list/insert/
    // list<int> maliste;
