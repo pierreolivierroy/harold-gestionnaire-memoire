@@ -9,7 +9,6 @@ Block::Block(size_t _size)
 	size = _size;
 	address = (intptr_t) malloc(size);
 	free = true;
-	// next = NULL;
 }
 
 Block::Block(size_t _size, intptr_t _address, bool _free)
@@ -41,8 +40,3 @@ bool Block::isFree()
 {
 	return free;
 }
-
-// Block* Block::getNext()
-// {
-// 	return next;
-// }

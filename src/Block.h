@@ -6,12 +6,6 @@
 
 class Block
 {
-private:
-	// size_t size;
-	// intptr_t address;
-	// bool free;
-	// Block* next;
-
 public:
 	size_t size;
 	intptr_t address;
@@ -24,7 +18,6 @@ public:
 	size_t getSize();
 	intptr_t getAddress();
 	bool isFree();
-	// Block* getNext();
 };
 
 #endif
