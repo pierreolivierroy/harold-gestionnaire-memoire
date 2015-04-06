@@ -21,7 +21,6 @@ public:
 	Block(size_t _size, intptr_t _address, bool _free);
 	~Block();
 	void printBlock();
-	void getValue();
 	size_t getSize();
 	intptr_t getAddress();
 	bool isFree();

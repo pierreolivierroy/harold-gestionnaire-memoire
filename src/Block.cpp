@@ -26,12 +26,7 @@ Block::~Block()
 
 void Block::printBlock()
 {
-	cout << "Size: " << size << " octets Address: " << address << " Free: " << free << "\n";
-}
-
-void Block::getValue()
-{
-
+	cout << "Taille: " << size << " octets Adresse: " << address << " Libre: " << free << "\n";
 }
 
 size_t Block::getSize()

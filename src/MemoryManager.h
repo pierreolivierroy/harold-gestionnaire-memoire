@@ -10,20 +10,24 @@ class MemoryManager
 {
 private:
 	static const size_t size = 1024;
-	VirtualMemory* vMem;
+	// VirtualMemory* vMem;
 
 public:
+	VirtualMemory* vMem;
 	MemoryManager();
 	// MemoryManager(IMemoryManagerStrategy _strategy);
+	void affiche_etat_memoire();
+	void affiche_parametres_memoire(size_t _maxTaillePetit);
 	void initmem();
-	intptr_t executeStrategy(IMemoryManagerStrategy *strategy, int _size);
-	void liberemem();
+	intptr_t executeStrategy(IMemoryManagerStrategy *_strategy, int _size);
+	void mergeBlocks(Block* _b1, Block* _b2);
+	void liberemem(intptr_t _pBloc);
 	int nbloclibres();
 	int nblocalloues();
-	int memlibre();
+	size_t memlibre();
 	int mem_pgrand_libre();
-	int mem_small_free(int _maxTaillePetit);
-	bool mem_est_alloue(/*pOctet*/);
+	int mem_small_free(size_t _maxTaillePetit);
+	bool mem_est_alloue(intptr_t _pOctet);
 };
 
 #endif

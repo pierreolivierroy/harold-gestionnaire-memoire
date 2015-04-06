@@ -9,15 +9,26 @@ using namespace std;
 
 int main()
 {
-   cout << "Hello World\n";
+    cout << "Hello World\n";
 
-   IMemoryManagerStrategy* strategy = new FirstFitStrategy();
-   MemoryManager* manager = new MemoryManager();
+    IMemoryManagerStrategy* strategy = new FirstFitStrategy();
+    MemoryManager* manager = new MemoryManager();
 
-   intptr_t b1 = manager->executeStrategy(strategy, 8);
-   intptr_t b2 = manager->executeStrategy(strategy, 512);
-   cout << "b1 " << b1;
-   cout << "b2 " << b2;
+    // cout << "Blocs libres: " << manager->nbloclibres() << "\n";
+    // cout << "Blocs alloués: " << manager->nblocalloues() << "\n";
+    intptr_t b1 = manager->executeStrategy(strategy, 8);
+    // cout << "b1 " << b1 << "\n";
+    intptr_t b2 = manager->executeStrategy(strategy, 512);
+    intptr_t b3 = manager->executeStrategy(strategy, 32);
+
+    // manager->vMem->print_list();
+    // cout << "b1 " << b1 << "\n";
+    manager->liberemem(b3);
+    // manager->vMem->print_list();
+
+    cout << "\n";
+    manager->affiche_etat_memoire();
+    manager->affiche_parametres_memoire(64);
 
    // ------------------------------------------------------
    // http://www.cplusplus.com/reference/list/list/insert/

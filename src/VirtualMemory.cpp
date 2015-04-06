@@ -21,12 +21,12 @@ VirtualMemory::VirtualMemory(int val)
 VirtualMemory::VirtualMemory(size_t size)
 {
 	// malloc
-	cout << "malloc\n";
+	// cout << "malloc\n";
 	// head = new Block(size);
 	Block* b = new Block(size);
 	l.push_back(b);
 	
-	print_list();
+	// print_list();
 }
 
 VirtualMemory::~VirtualMemory()
@@ -39,38 +39,11 @@ VirtualMemory::~VirtualMemory()
 
 void VirtualMemory::print_list()
 {
-    // Node *p = _pHead;
-    
-    // /* The list is empty? */
-    // if (_pHead == NULL) {
-    //     cout << "The list is empty" << endl;
-    //     return;
-    // }
-    
-    // cout << "VirtualMemory: ";
-    //  A basic way of traversing a linked list 
-    // while (p != NULL) { /* while there are some more nodes left */
-    //     /* output the value */
-    //     cout << p->_value;
-    //     /* The pointer moves along to the next one */
-    //     p = p->_pNext;
-    // }
-	int n = 0;
+    // cout << "printlist\n";
 	for (it=l.begin(); it!=l.end(); ++it)
 	{
   		(*it)->printBlock();
-		// cout << ' ' << n;
-		n++;
 	}
-
-    // list<Object*>::iterator iter;
-
-    // iter = this->objectlist.begin();
-
-    // while(iter != this->objectlist.end())
-    // {
-    //     iter->print();
-    // }
 
     cout << endl;
 }
