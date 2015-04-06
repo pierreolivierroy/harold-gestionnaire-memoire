@@ -3,6 +3,7 @@
 #define Block_h
 
 #include <stdlib.h>
+#include <stdint.h>
 
 class Block
 {

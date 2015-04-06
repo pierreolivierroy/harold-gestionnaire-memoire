@@ -9,21 +9,6 @@ MemoryManager::MemoryManager()
 	initmem();
 }
 
-void MemoryManager::affiche_etat_memoire()
-{
-	vMem->print_list();
-}
-
-void MemoryManager::affiche_parametres_memoire(size_t _maxTaillePetit)
-{
-	cout << "\n";
-	cout << "Plus grand bloc libre: " << mem_pgrand_libre() << " octets\n";
-	cout << "Mémoire libre: " << memlibre() << " octets\n";
-	cout << "Blocs libres: " << nbloclibres() << "\n";
-    cout << "Blocs alloués: " << nblocalloues() << "\n";
-    cout << "Nombre blocs libres plus petits que " << _maxTaillePetit << " octets: " << mem_small_free(_maxTaillePetit) << "\n";
-}
-
 void MemoryManager::initmem()
 {
 	vMem = new VirtualMemory(size);
