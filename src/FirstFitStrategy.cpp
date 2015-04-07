@@ -36,6 +36,6 @@ intptr_t FirstFitStrategy::alloumem(VirtualMemory* vm, size_t size)
     	}
     	iter++;
     }
-    
-	return NULL;
+
+	return 0;
 }

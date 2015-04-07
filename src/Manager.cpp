@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
   TestStrategy* ts = new TestStrategy();
-
+  
   ts->affiche_etat_memoire();
   ts->affiche_parametres_memoire(64);
 

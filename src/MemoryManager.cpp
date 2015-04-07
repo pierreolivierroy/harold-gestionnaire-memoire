@@ -48,7 +48,8 @@ void MemoryManager::liberemem(intptr_t _pBloc)
     				vMem->l.insert(iter, b);
     
     				iter = vMem->l.erase(iter);
-    				vMem->l.erase(iter);	
+    				vMem->l.erase(iter);
+    				iter--;	
     			}    			
     		}
     	iter++;

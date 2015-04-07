@@ -6,16 +6,7 @@ using namespace std;
 
 VirtualMemory::VirtualMemory()
 {
-    /* Initialize the head and tail node */
-    // _pHead = _pTail = NULL;
-    // head = NULL;
-}
-
-VirtualMemory::VirtualMemory(int val)
-{
-    /* Create a new node, acting as both the head and tail node */
-    // _pHead = new Node(val);
-    // _pTail = _pHead;
+ 
 }
 
 VirtualMemory::VirtualMemory(size_t size)
