@@ -12,14 +12,9 @@ class VirtualMemory
 	public:
 	    list<Block*> l;
 	    list<Block*>::iterator it;
-	    /* Constructors with No Arguments */
 	    VirtualMemory(void);
-	    /* Constructors with size_t argument */
 	    VirtualMemory(size_t size);
-	    /* Destructor */
 	    ~VirtualMemory(void);
-	    
-	    /* Traversing the list and printing the value of each node */
 	    void print_list();
 };
 

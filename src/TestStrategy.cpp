@@ -21,13 +21,14 @@ TestStrategy::TestStrategy()
     manager->liberemem(b2);
     manager->liberemem(b4);
     manager->liberemem(b6);
-    // manager->liberemem(b7);
     manager->liberemem(b8);
 
     intptr_t b9 = manager->executeStrategy(strategy, 64);
     intptr_t b10 = manager->executeStrategy(strategy, 128);
 
     manager->liberemem(b7);
+
+    intptr_t b11 = manager->executeStrategy(strategy, 128);
 
     cout << "\n";
 }

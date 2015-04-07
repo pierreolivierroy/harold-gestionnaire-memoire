@@ -3,7 +3,6 @@
 #ifndef IMemoryManagerStrategy_h
 #define IMemoryManagerStrategy_h
 
-// #include "Block.h"
 #include "VirtualMemory.h"
 
 class IMemoryManagerStrategy
