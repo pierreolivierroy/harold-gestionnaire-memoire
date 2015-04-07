@@ -21,7 +21,6 @@ intptr_t MemoryManager::executeStrategy(IMemoryManagerStrategy* _strategy, int _
 
 void MemoryManager::liberemem(intptr_t _pBloc)
 {
-	cout << "libère " << _pBloc << "\n";
 	list<Block*>::iterator iter, iter2;
 	iter = vMem->l.begin();
     while(iter != vMem->l.end())
@@ -45,7 +44,6 @@ void MemoryManager::liberemem(intptr_t _pBloc)
     		{
     			if((*iter)->isFree() && (*iter2)->isFree())
     			{
-    				cout << "2 blocs libres\n";
     				Block* b = new Block((*iter)->size + (*iter2)->size, (*iter)->address, true);
     				vMem->l.insert(iter, b);
     
@@ -53,9 +51,6 @@ void MemoryManager::liberemem(intptr_t _pBloc)
     				vMem->l.erase(iter);
     				iter--;
     				iter--;
-    				cout << "après erase\n";	
-    				(*iter)->printBlock();
-    				(*iter2)->printBlock();
     			}    			
     		}
     	iter++;
