@@ -6,7 +6,7 @@ using namespace std;
 
 TestStrategy::TestStrategy()
 {
-	strategy = new FirstFitStrategy();
+	strategy = new BestFitStrategy();
     manager = new MemoryManager();
 
     intptr_t b1 = manager->executeStrategy(strategy, 128);
@@ -23,12 +23,14 @@ TestStrategy::TestStrategy()
     manager->liberemem(b6);
     manager->liberemem(b8);
 
+    affiche_etat_memoire();
+
     intptr_t b9 = manager->executeStrategy(strategy, 64);
-    intptr_t b10 = manager->executeStrategy(strategy, 128);
+    intptr_t b10 = manager->executeStrategy(strategy, 65);
+    intptr_t b11 = manager->executeStrategy(strategy, 63);
 
-    manager->liberemem(b7);
-
-    intptr_t b11 = manager->executeStrategy(strategy, 128);
+    manager->liberemem(b1);
+    intptr_t b12 = manager->executeStrategy(strategy, 2);
 
     cout << "\n";
 }
