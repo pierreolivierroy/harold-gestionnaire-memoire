@@ -7,6 +7,7 @@
 #include "MemoryManager.h"
 #include "FirstFitStrategy.h"
 #include "BestFitStrategy.h"
+#include "WorstFitStrategy.h"
 
 class TestStrategy
 {
