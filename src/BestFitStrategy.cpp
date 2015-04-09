@@ -7,6 +7,7 @@ using namespace std;
 
 intptr_t BestFitStrategy::alloumem(VirtualMemory* vm, size_t size)
 {
+	bool found = false;
 	size_t lowestSize = 0;
 	list<Block*>::iterator iter, bestIter;
 	iter = vm->l.begin();
@@ -14,7 +15,7 @@ intptr_t BestFitStrategy::alloumem(VirtualMemory* vm, size_t size)
     {
     	if(size <= (*iter)->size && (*iter)->isFree())
     	{
-
+    		found = true;
     		if(lowestSize == 0)
     		{
     			lowestSize = (*iter)->size;
@@ -29,7 +30,7 @@ intptr_t BestFitStrategy::alloumem(VirtualMemory* vm, size_t size)
     	iter++;
     }
 
-    if((*bestIter) != NULL)
+    if(found)
     {
     	size_t sizeRemaining = (*bestIter)->size - size;
 		intptr_t newAddress = (*bestIter)->address + size;

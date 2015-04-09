@@ -8,6 +8,7 @@
 #include "FirstFitStrategy.h"
 #include "BestFitStrategy.h"
 #include "WorstFitStrategy.h"
+#include "NextFitStrategy.h"
 
 class TestStrategy
 {
