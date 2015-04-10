@@ -49,6 +49,8 @@ TestStrategy::TestStrategy()
         cout << "Numéro invalide, essayez de nouveau." << endl;
     }
 
+    cout << "Assignation de blocs de base\n";
+    cout << "-------------------------------\n";
     intptr_t b1 = manager->executeStrategy(strategy, 128);
     intptr_t b2 = manager->executeStrategy(strategy, 64);
     intptr_t b3 = manager->executeStrategy(strategy, 128);
@@ -70,6 +72,7 @@ TestStrategy::TestStrategy()
     intptr_t b10 = manager->executeStrategy(strategy, 64);
     intptr_t b11 = manager->executeStrategy(strategy, 20);
     intptr_t b12 = manager->executeStrategy(strategy, 128);
+    intptr_t b13 = manager->executeStrategy(strategy, 108);
 }
 
 void TestStrategy::affiche_etat_memoire()
