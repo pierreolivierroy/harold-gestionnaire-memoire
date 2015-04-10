@@ -1,16 +1,16 @@
 # harold-gestionnaire-memoire
 Gestionnaire de mémoire avec plusieurs stratégies d’allocation
 
-Instructions de compilation:
-aller dans le répertoire racine du projet
+##Instructions de compilation:
+Naviguer au répertoire racine du projet
 
-faire la commande suivante:
+Faire la commande suivante:
 
-make
+`make`
 
 Pour exécuter le programme ensuite lancez la commande suivante
 
-./memory_manager
+`./memory_manager`
 
 Faites ensuite votre choix de stratégie avec 1, 2, 3 ou 4
 
