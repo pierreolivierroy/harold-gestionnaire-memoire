@@ -6,6 +6,9 @@
 #include "IMemoryManagerStrategy.h"
 #include "MemoryManager.h"
 #include "FirstFitStrategy.h"
+#include "BestFitStrategy.h"
+#include "WorstFitStrategy.h"
+#include "NextFitStrategy.h"
 
 class TestStrategy
 {
