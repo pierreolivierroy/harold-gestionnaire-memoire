@@ -73,6 +73,7 @@ TestStrategy::TestStrategy()
     intptr_t b11 = manager->executeStrategy(strategy, 20);
     intptr_t b12 = manager->executeStrategy(strategy, 128);
     intptr_t b13 = manager->executeStrategy(strategy, 108);
+    intptr_t b14 = manager->executeStrategy(strategy, 1);
 }
 
 void TestStrategy::affiche_etat_memoire()
